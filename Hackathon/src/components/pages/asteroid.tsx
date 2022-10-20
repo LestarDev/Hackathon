@@ -7,11 +7,11 @@ const Asteroid = () => {
                 
             </div>
             <div className='greenhouse'>
-                <button className='enter'></button>
+                
             </div>
 
             <div className='mine'>
-                <button className='enter'></button>
+                
             </div>
             <div className='ground'>
                 
