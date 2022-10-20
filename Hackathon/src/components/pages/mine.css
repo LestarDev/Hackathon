@@ -1,0 +1,129 @@
+body{
+    overflow: hidden;
+}
+.background{
+    background-image:url('./../../assets/stoneWall2.png');
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+   
+}
+.rightWall{
+    background-color:rgb(157, 157, 157);
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    width: 5%;
+    z-index: 2;
+
+}
+.leftWall{
+    background-color:rgb(157, 157, 157);
+    position: absolute;
+    left: 0;
+    height: 100vh;
+    width: 5%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+}
+.roof{
+    background-color:rgb(157, 157, 157);
+    position: absolute;
+width: 100%;
+height: 10vh;
+z-index: 2;
+}
+.floor{
+    background-color:rgb(157, 157, 157);
+    position: absolute;
+width: 100%;
+height: 10vh;
+bottom: 0;
+z-index: 2;
+}
+.floor1{
+    background-color:rgb(157, 157, 157);
+    position: absolute;
+width: 70%;
+height: 5vh;
+top: 30%;
+left: 0;
+z-index: 2;
+}
+.floor2{
+    background-color:rgb(157, 157, 157);
+    position: absolute;
+width: 70%;
+height: 5vh;
+top: 60%;
+left: 0;
+z-index: 2;
+}
+.copperOre{
+    scale: 1.30;
+position: absolute;
+
+left: 10%;
+top: 15%;
+z-index: 3;
+}
+.ironOre{
+    scale: 1.30;
+    position: absolute;
+    
+    left: 10%;
+    top: 45%;
+    z-index: 3;
+}
+.goldOre{
+    scale: 1.30;
+    position: absolute;
+    
+    left: 10%;
+    top: 75%;
+    z-index: 3;
+}
+.gate1{
+    width: 40%;
+    z-index: 1;
+    background-color:rgb(72, 36, 0);
+    position: absolute;
+
+height: 3%;
+top: 30%;
+right: 0;
+}
+.gate2{
+    width: 40%;
+    z-index: 1;
+    background-color:rgb(72, 36, 0);
+    position: absolute;
+
+height: 3%;
+top: 60%;
+right: 0;
+}
+
+.upgrade1{
+   position: absolute;
+    z-index: 3;
+    height: 50px;
+    width: 50px;
+    top: 20%;
+}
+.upgrade2{
+    position: absolute;
+     z-index: 3;
+     height: 50px;
+     width: 50px;
+     top: 50%;
+ }
+ .upgrade3{
+    position: absolute;
+     z-index: 3;
+     height: 50px;
+     width: 50px;
+     top: 80%;
+ }
