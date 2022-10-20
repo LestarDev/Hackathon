@@ -1,15 +1,14 @@
-import { useEffect, useRef } from "react";
 import Asteroid from "./pages/asteroid";
-import useCurrency from "../hook/useCurrency";
-import Greenhouse from "./pages/greenhouse";
+import Layout from "./pages/layout/layout";
 
 
 const GameScreen = () => {
-    const xd = useCurrency()
+    
     
     return (
         <div>
         <Greenhouse />
+            <Layout />
         </div>
     )
 }

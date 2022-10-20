@@ -1,0 +1,17 @@
+#Layout{
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    right: 0;
+}
+
+#Layout div{
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+#Layout div span{
+    font-size: 32px;
+    margin-right: 5px;
+}
