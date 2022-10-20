@@ -1,13 +1,33 @@
 import { useDispatch, useSelector } from "react-redux"
-import { lvlUpMineCopper, lvlUpMineIron, lvlUpMineGold, incrementByAmountCopper, incrementByAmountGold, incrementByAmountIron, decrementByAmountCopper, decrementByAmountGold, decrementByAmountIron } from "../store/slices/currencySlice";
+import { setPage, lvlUpMineCopper, lvlUpMineIron, lvlUpMineGold, incrementByAmountCopper, incrementByAmountGold, incrementByAmountIron, decrementByAmountCopper, decrementByAmountGold, decrementByAmountIron } from "../store/slices/currencySlice";
 
 type currencyTypes = "copper" | "iron" | "gold"
 type mineType = "copper" | "iron" | "gold"
+type pageType = "home" | "greenhouse" | "mine" | "rocket"
 
 const useCurrency = () => {
 
     const dispatch = useDispatch();
-    const {copper, iron, gold} = (useSelector((state) => state) as any).currency;
+    const {copper, iron, gold, page} = (useSelector((state) => state) as any).currency;
+
+    const moveToPage = (page: pageType) => {
+        switch(page){
+            case "home":
+                dispatch(setPage(0))
+                break;
+            case "greenhouse":
+                dispatch(setPage(1))
+                break;
+            case "mine":
+                dispatch(setPage(2))
+                break;
+            case "rocket":
+                dispatch(setPage(3))
+                break;
+            default:
+                console.log("Error!")
+        }
+    }
 
     const lvlUpMine = (current: mineType) => {
         switch(current){
@@ -61,7 +81,10 @@ const useCurrency = () => {
     return ({
         copper, iron, gold,
         substract,
-        add
+        add,
+        lvlUpMine,
+        moveToPage,
+        page
     }
     )
 
