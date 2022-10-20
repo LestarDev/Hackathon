@@ -1,5 +1,6 @@
 import useCurrency from "../hook/useCurrency";
 import Asteroid from "./pages/asteroid";
+import GameWin from "./pages/gameWin";
 import Greenhouse from "./pages/greenhouse";
 import Layout from "./pages/layout/layout";
 import Mine from "./pages/mine";
@@ -10,6 +11,9 @@ function Page(){
     const xd = useCurrency();
     let page;
     switch(xd.page){
+        case 0:
+            page = <TheEnd />
+            break;
         case 1:
             page =  <Greenhouse/>
             break;
@@ -19,8 +23,8 @@ function Page(){
         case 3:
             page = <Rocket/>
             break;
-        case 4:
-            page = <TheEnd/>
+        case 5:
+            page = <GameWin />
         default:
             page = <Asteroid/>
     }

@@ -20,7 +20,7 @@ const initialState: CounterState = {
   copperMine: 0,
   ironMine: 0,
   goldMine: 0,
-  page: 4
+  page: 0
 }
 
 export const currencySlice = createSlice({
