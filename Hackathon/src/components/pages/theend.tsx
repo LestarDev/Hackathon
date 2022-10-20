@@ -16,7 +16,6 @@ const TheEnd = () => {
     return (
         <div className='last'>
                 <img width={screenWidth} height={screenHeight} src={scene1} ref={refImg} onClick={(e: React.MouseEvent<HTMLElement>)=>{
-                    console.log(refImg.current!.src)
                     switch(scene){
                         case 1:
                             refImg.current!.src = scene2

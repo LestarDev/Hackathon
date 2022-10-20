@@ -14,9 +14,9 @@ interface CounterState {
 
 // Define the initial state using that type
 const initialState: CounterState = {
-  copper: 0,
-  iron: 0,
-  gold: 0,
+  copper: 5000,
+  iron: 5000,
+  gold: 5000,
   copperMine: 0,
   ironMine: 0,
   goldMine: 0,

@@ -25,6 +25,7 @@ function Page(){
             break;
         case 5:
             page = <GameWin />
+            break;
         default:
             page = <Asteroid/>
     }

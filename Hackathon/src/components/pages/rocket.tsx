@@ -25,6 +25,8 @@ const Rocket = () => {
                 <div className='koniecGry' onClick={(e: React.MouseEvent<HTMLElement>)=>{
                     if(xd.iron<5000 && xd.copper<5000 && xd.gold<5000) return;
                     alert("Wygrana!");
+                    xd.moveToPage("animationEnd");
+                    console.log(xd.page)
                 }}>Wplac</div>
                 </div>
             </div>
