@@ -6,6 +6,7 @@ import upgrade0 from './../../assets/upgrade0.png'
 import upgrade1 from "./../../assets/upgrade1.png"
 import upgrade2 from "./../../assets/upgrade2.png"
 import upgrade3 from "./../../assets/upgrade3.png"
+import exitIcon from "./../../assets/exit.png"
 import useCurrency from '../../hook/useCurrency'
 import { useEffect, useRef } from 'react'
 import './../../components/pages/layout/layout.css'
@@ -66,6 +67,11 @@ const Mine = () => {
 
     return (
         <div className='background'>
+            <div className='exit' onClick={(e: React.MouseEvent<HTMLElement>)=>{
+                xd.moveToPage("home");
+            }}>
+                <img src={exitIcon} />
+            </div>
                 <div className='roof'></div>
                 <div className='rightWall'>
                     
