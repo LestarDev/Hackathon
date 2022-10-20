@@ -5,7 +5,7 @@ import type { PayloadAction } from '@reduxjs/toolkit'
 interface CounterState {
   copper: number,
   iron: number,
-  gold: number
+  gold: number,
 }
 
 // Define the initial state using that type

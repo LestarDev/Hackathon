@@ -1,4 +1,3 @@
-import { useEffect, useRef } from "react";
 import useCurrency from "../hook/useCurrency";
 import Greenhouse from "./pages/greenhouse";
 
