@@ -191,9 +191,9 @@ const Mine = () => {
                 <div className='floor2'></div>
                 <img src={goldOre} className='goldOre' alt='goldOre'/>
                                 <div className='leftWall'>
-                                    <img className='level1' src={upgrade0} alt='upgradeCopper'/>
-                                    <img className='level2' src={upgrade0} alt='upgradeIron'/>
-                                    <img className='level3' src={upgrade0} alt='upgradeGold'/>
+                                    <img className='level1' ref={copperRef} src={upgrade0} alt='upgradeCopper'/>
+                                    <img className='level2' ref={ironRef} src={upgrade0} alt='upgradeIron'/>
+                                    <img className='level3' ref={goldRef} src={upgrade0} alt='upgradeGold'/>
                                 </div>
                 <div className='upgrade3' onClick={(e: React.MouseEvent<HTMLElement>)=>{
                         if(xd.goldMine>=3) return;
