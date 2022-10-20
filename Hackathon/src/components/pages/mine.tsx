@@ -18,6 +18,9 @@ const Mine = () => {
     const ironRef = useRef<HTMLImageElement>(null);
     const goldRef = useRef<HTMLImageElement>(null);
 
+    const odpRef1 = useRef<HTMLDivElement>(null);
+    const odpRef2 = useRef<HTMLDivElement>(null);
+
     useEffect(()=>{
         const interval = setInterval(() => {
             switch(xd.copperMine){
@@ -116,7 +119,12 @@ const Mine = () => {
                     <p>UPGRADE</p>
                 </div>
         
-                <div className='odblokuj1'><p>odblokuj</p></div>
+                <div className='odblokuj1' ref={odpRef1} onClick={(e: React.MouseEvent<HTMLElement>)=>{
+                    if(xd.ironMine>=1) return;
+                    if(xd.copper<200) return;
+                    xd.lvlUpMine("iron");
+                    odpRef1.current!.style.display="none";
+                }}><p>odblokuj</p></div>
                 <div className='gate1'></div>
 
                 <div className='floor1'></div>
@@ -186,7 +194,12 @@ const Mine = () => {
                 </div>
 
 
-                <div className='odblokuj2'><p>odblokuj</p></div>
+                <div className='odblokuj2' ref={odpRef2} onClick={(e: React.MouseEvent<HTMLElement>)=>{
+                    if(xd.goldMine>=1) return;
+                    if(xd.iron<200) return;
+                    xd.lvlUpMine("iron");
+                    odpRef2.current!.style.display="none";
+                }}><p>odblokuj</p></div>
                 <div className='gate2'></div>
                 <div className='floor2'></div>
                 <img src={goldOre} className='goldOre' alt='goldOre'/>
