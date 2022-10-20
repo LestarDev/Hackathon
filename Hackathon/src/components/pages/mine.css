@@ -62,7 +62,7 @@ left: 0;
 z-index: 2;
 }
 .copperOre{
-    scale: 1.30;
+    scale: 1.25;
 position: absolute;
 
 left: 10%;
@@ -70,7 +70,7 @@ top: 15%;
 z-index: 3;
 }
 .ironOre{
-    scale: 1.30;
+    scale: 1.25;
     position: absolute;
     
     left: 10%;
@@ -78,7 +78,7 @@ z-index: 3;
     z-index: 3;
 }
 .goldOre{
-    scale: 1.30;
+    scale: 1.25;
     position: absolute;
     
     left: 10%;
@@ -106,24 +106,115 @@ top: 60%;
 right: 0;
 }
 
-.upgrade1{
+.level1{
    position: absolute;
     z-index: 3;
     height: 50px;
     width: 50px;
     top: 20%;
 }
-.upgrade2{
+.level2{
     position: absolute;
      z-index: 3;
      height: 50px;
      width: 50px;
      top: 50%;
  }
- .upgrade3{
+ .level3{
     position: absolute;
      z-index: 3;
      height: 50px;
      width: 50px;
      top: 80%;
  }
+ .upgrade1{
+    text-align: center;
+    font-size: 30px;
+    left: 30%;
+    width: 15%;
+    position: absolute;
+    border-radius: 5px;
+    border: 3px solid rgb(39, 39, 39);
+    top: 15%;
+    height: 10vh;
+    background: rgb(255, 162, 0);
+ }
+ .upgrade2{
+    text-align: center;
+    font-size: 30px;
+    left: 30%;
+    width: 15%;
+    position: absolute;
+    border-radius: 5px;
+    border: 3px solid rgb(39, 39, 39);
+    top: 45%;
+    height: 10vh;
+    background: rgb(255, 162, 0);
+} 
+.upgrade3{
+    text-align: center;
+    font-size: 30px;
+    left: 30%;
+    width: 15%;
+    position: absolute;
+    border-radius: 5px;
+    border: 3px solid rgb(39, 39, 39);
+    top: 70%;
+    height: 10vh;
+    background: rgb(255, 162, 0);
+}
+.cost1{
+
+}
+
+ @media screen and (max-width: 1100px) {
+        .copperOre,.ironOre,.goldOre{
+            scale: 0.75;
+        }
+  }
+  @media screen and (max-height: 750px) {
+    .copperOre,.ironOre,.goldOre{
+        scale: 0.75;
+    }
+}
+.cost1{
+position: absolute;
+z-index: 3;
+left: 60%;
+top: 30%;
+}
+
+.cost1 div{
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.cost1 div span{
+    font-size: 32px;
+    margin-right: 5px;
+}
+.odblokuj1{
+    background-color: red;
+    text-align: center;
+    font-size: 30px;
+    left: 70%;
+    width: 15%;
+    position: absolute;
+    border-radius: 5px;
+    border: 3px solid rgb(39, 39, 39);
+    top: 15%;
+    height: 10vh;
+}
+.odblokuj2{
+    background-color: red;
+    text-align: center;
+    font-size: 30px;
+    left: 70%;
+    width: 15%;
+    position: absolute;
+    border-radius: 5px;
+    border: 3px solid rgb(39, 39, 39);
+    top: 45%;
+    height: 10vh;
+}
