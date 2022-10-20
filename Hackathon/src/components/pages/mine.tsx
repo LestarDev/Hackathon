@@ -81,7 +81,7 @@ const Mine = () => {
                     break;
             }
 
-        }, 60000);
+        }, 6000);
         return () => {
             clearInterval(interval)
         }
@@ -239,10 +239,7 @@ const Mine = () => {
                     xd.lvlUpMine("gold");
                     odpRef2.current!.style.display="none";
                 }}><p>odblokuj</p></div>
-                <div className='gate2'></div>
-                <div className='floor2'></div>
 
-                <img src={goldOre} className='goldOre' alt='goldOre'/>
                                 <div className='leftWall'>
                                     <img className='level1' ref={copperRef} src={upgrade0} alt='upgradeCopper'/>
                                     <img className='level2' ref={ironRef} src={upgrade0} alt='upgradeIron'/>
