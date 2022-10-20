@@ -1,11 +1,11 @@
-const rocket = () => {
+const Rocket = () => {
     return (
         <div>
             <div className="rocket">
-                <button></button>
+                <button className="repair"></button>
             </div>
         </div>
     )
 }
 
-export default rocket;
+export default Rocket;
