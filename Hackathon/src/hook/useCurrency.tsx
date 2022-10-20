@@ -1,12 +1,29 @@
 import { useDispatch, useSelector } from "react-redux"
-import { incrementByAmountCopper, incrementByAmountGold, incrementByAmountIron, decrementByAmountCopper, decrementByAmountGold, decrementByAmountIron } from "../store/slices/currencySlice";
+import { lvlUpMineCopper, lvlUpMineIron, lvlUpMineGold, incrementByAmountCopper, incrementByAmountGold, incrementByAmountIron, decrementByAmountCopper, decrementByAmountGold, decrementByAmountIron } from "../store/slices/currencySlice";
 
 type currencyTypes = "copper" | "iron" | "gold"
+type mineType = "copper" | "iron" | "gold"
 
 const useCurrency = () => {
 
     const dispatch = useDispatch();
     const {copper, iron, gold} = (useSelector((state) => state) as any).currency;
+
+    const lvlUpMine = (current: mineType) => {
+        switch(current){
+            case "copper":
+                dispatch(lvlUpMineCopper())
+                break;
+            case "iron":
+                dispatch(lvlUpMineIron())
+                break;
+            case "gold":
+                dispatch(lvlUpMineGold())
+                break;
+            default:
+                console.log("Error")
+        }
+    }
 
     const add = (currency: currencyTypes, amount: number) => {
         switch(currency){
