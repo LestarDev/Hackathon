@@ -1,4 +1,4 @@
-const mine = () => {
+const Mine = () => {
 
     function copperUpgrades():number{
         return 0;
@@ -50,4 +50,4 @@ const mine = () => {
     )
 }
 
-export default mine;
+export default Mine;
