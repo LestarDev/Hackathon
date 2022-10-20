@@ -180,8 +180,8 @@ right: 0;
 .cost1{
 position: absolute;
 z-index: 3;
-left: 60%;
-top: 30%;
+left: 50%;
+top:  15%;
 }
 
 .cost1 div{
@@ -194,6 +194,41 @@ top: 30%;
     font-size: 32px;
     margin-right: 5px;
 }
+.cost2{
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top:  45%;
+    }
+    
+    .cost2 div{
+        display: flex;
+        align-items: center;
+        margin: 5px;
+    }
+    
+    .cost2 div span{
+        font-size: 32px;
+        margin-right: 5px;
+}
+.cost3{
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top:  70%;
+    }
+    
+    .cost3 div{
+        display: flex;
+        align-items: center;
+        margin: 5px;
+    }
+    
+    .cost3 div span{
+        font-size: 32px;
+        margin-right: 5px;
+    }
+
 .odblokuj1{
     background-color: red;
     text-align: center;
@@ -218,3 +253,39 @@ top: 30%;
     top: 45%;
     height: 10vh;
 }
+
+.cost4{
+    position: absolute;
+    z-index: 3;
+    left: 87%;
+    top:  15%;
+    }
+    
+    .cost4 div{
+        display: flex;
+        align-items: center;
+        margin: 5px;
+    }
+    
+    .cost4 div span{
+        font-size: 32px;
+        margin-right: 5px;
+    }
+    .cost5{
+        position: absolute;
+        z-index: 3;
+        left: 87%;
+        top:  45%;
+        }
+        
+        .cost5 div{
+            display: flex;
+            align-items: center;
+            margin: 5px;
+        }
+        
+        .cost5 div span{
+            font-size: 32px;
+            margin-right: 5px;
+        }
+    

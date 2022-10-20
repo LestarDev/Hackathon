@@ -6,6 +6,9 @@ import upgrade0 from './../../assets/upgrade0.png'
 import upgrade1 from "./../../assets/upgrade1.png"
 import upgrade2 from "./../../assets/upgrade2.png"
 import upgrade3 from "./../../assets/upgrade3.png"
+import copper from "./../../assets/big_miedz_item.png"
+import iron from "./../../assets/big_zelazo_item.png"
+import gold from "./../../assets/big_zloto_item.png"
 import useCurrency from '../../hook/useCurrency'
 import { useEffect, useRef } from 'react'
 import './../../components/pages/layout/layout.css'
@@ -88,8 +91,18 @@ const Mine = () => {
                 <div className='upgrade1'>
                     <p>UPGRADE</p>
                 </div>
+                <div className='cost1'>
+                    <div><span>0</span><img src={copper} alt='iCopper'/></div>
+                    <div><span>0</span><img src={iron} alt='iIron'/></div>
+                    <div><span>0</span><img src={gold} alt='iGold'/></div>
+                </div>
         
                 <div className='odblokuj1'><p>odblokuj</p></div>
+                <div className='cost4'>
+                <div><span>0</span><img src={copper} alt='iCopper'/></div>
+                    <div><span>0</span><img src={iron} alt='iIron'/></div>
+                    <div><span>0</span><img src={gold} alt='iGold'/></div>
+                </div>
                 <div className='gate1'></div>
 
                 <div className='floor1'></div>
@@ -198,14 +211,24 @@ const Mine = () => {
                         }
                     }}/>
 
-
+                </div>
 
                 <div className='upgrade2'>
                     <p>UPGRADE</p>
                 </div>
+                <div className='cost2'>
+                    <div><span>0</span><img src={copper} alt='iCopper'/></div>
+                    <div><span>0</span><img src={iron} alt='iIron'/></div>
+                    <div><span>0</span><img src={gold} alt='iGold'/></div>
+                </div>
 
 
                 <div className='odblokuj2'><p>odblokuj</p></div>
+                <div className='cost5'>
+                    <div><span>0</span><img src={copper} alt='iCopper'/></div>
+                    <div><span>0</span><img src={iron} alt='iIron'/></div>
+                    <div><span>0</span><img src={gold} alt='iGold'/></div>
+                </div>
                 <div className='gate2'></div>
                 <div className='floor2'></div>
                 <img src={goldOre} className='goldOre' alt='goldOre'/>
@@ -216,6 +239,11 @@ const Mine = () => {
                                 </div>
                 <div className='upgrade3'>
                     <p>UPGRADE</p>
+                </div>
+                <div className='cost3'>
+                    <div><span>0</span><img src={copper} alt='iCopper'/></div>
+                    <div><span>0</span><img src={iron} alt='iIron'/></div>
+                    <div><span>0</span><img src={gold} alt='iGold'/></div>
                 </div>
     <div className='floor'></div>
 
