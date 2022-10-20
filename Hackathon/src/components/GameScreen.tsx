@@ -7,6 +7,7 @@ const GameScreen = () => {
     
     return (
         <div>
+        <Greenhouse />
             <Layout />
         </div>
     )
