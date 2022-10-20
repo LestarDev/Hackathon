@@ -20,6 +20,12 @@ z-index: 5;
 left: 40%;
 top: 50%;
 }
+
+.rocket img{
+    cursor: pointer;
+}
+
+
 .greenhouse{
 
     position: absolute;
@@ -30,6 +36,11 @@ top: 50%;
     height: 320px;
     z-index: 5;
 }
+
+.greenhouse img{
+    cursor: pointer;
+}
+
 .mine{
 
     position: absolute;
@@ -41,11 +52,13 @@ top: 50%;
     z-index: 5;
 }
 
+.mine{
+    cursor: pointer;
+}
+
 .ground img{
     bottom: 0%;
 
-    
- 
     width: 100%;
     height: 30%;
     

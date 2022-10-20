@@ -9,6 +9,7 @@ interface CounterState {
   copperMine: number,
   ironMine: number,
   goldMine: number,
+  page: number,
 }
 
 // Define the initial state using that type
@@ -18,7 +19,8 @@ const initialState: CounterState = {
   gold: 0,
   copperMine: 0,
   ironMine: 0,
-  goldMine: 0
+  goldMine: 0,
+  page: 0
 }
 
 export const currencySlice = createSlice({
@@ -53,10 +55,13 @@ export const currencySlice = createSlice({
     },
     lvlUpMineGold: (state) => {
       state.goldMine +=1
+    },
+    setPage: (state, action: PayloadAction<number>) => {
+      state.page = action.payload
     }
   },
 })
 
-export const { lvlUpMineCopper, lvlUpMineIron, lvlUpMineGold, incrementByAmountCopper, decrementByAmountCopper, incrementByAmountIron, decrementByAmountIron, incrementByAmountGold, decrementByAmountGold } = currencySlice.actions
+export const { setPage, lvlUpMineCopper, lvlUpMineIron, lvlUpMineGold, incrementByAmountCopper, decrementByAmountCopper, incrementByAmountIron, decrementByAmountIron, incrementByAmountGold, decrementByAmountGold } = currencySlice.actions
 
 export default currencySlice.reducer
