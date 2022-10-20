@@ -5,6 +5,7 @@ import copperIcon from "./../../assets/big_miedz_item.png"
 import ironIcon from "./../../assets/big_zelazo_item.png"
 import goldIcon from "./../../assets/big_zloto_item.png"
 import exitIcon from "./../../assets/exit.png"
+import "./rocket.css"
 
 const Rocket = () => {
     const xd = useCurrency();
@@ -24,6 +25,8 @@ const Rocket = () => {
                 <div className='koniecGry' onClick={(e: React.MouseEvent<HTMLElement>)=>{
                     if(xd.iron<5000 && xd.copper<5000 && xd.gold<5000) return;
                     alert("Wygrana!");
+                    xd.moveToPage("animationEnd");
+                    console.log(xd.page)
                 }}>Wplac</div>
                 </div>
             </div>

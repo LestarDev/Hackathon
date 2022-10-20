@@ -3,7 +3,7 @@ import { setPage, lvlUpMineCopper, lvlUpMineIron, lvlUpMineGold, incrementByAmou
 
 type currencyTypes = "copper" | "iron" | "gold"
 type mineType = "copper" | "iron" | "gold"
-type pageType = "home" | "greenhouse" | "mine" | "rocket"
+type pageType = "home" | "greenhouse" | "mine" | "rocket" | "animationStart" | "animationEnd"
 
 const useCurrency = () => {
 
@@ -12,7 +12,10 @@ const useCurrency = () => {
 
     const moveToPage = (page: pageType) => {
         switch(page){
-            case "home":
+            case "animationEnd":
+                dispatch(setPage(5))
+                break;
+            case "animationStart":
                 dispatch(setPage(0))
                 break;
             case "greenhouse":
@@ -23,6 +26,9 @@ const useCurrency = () => {
                 break;
             case "rocket":
                 dispatch(setPage(3))
+                break;
+            case "home":
+                dispatch(setPage(4))
                 break;
             default:
                 console.log("Error!")
