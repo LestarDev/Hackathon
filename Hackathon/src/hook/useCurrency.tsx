@@ -8,7 +8,7 @@ type pageType = "home" | "greenhouse" | "mine" | "rocket"
 const useCurrency = () => {
 
     const dispatch = useDispatch();
-    const {copper, iron, gold, page} = (useSelector((state) => state) as any).currency;
+    const {goldMine, ironMine, copperMine ,copper, iron, gold, page} = (useSelector((state) => state) as any).currency;
 
     const moveToPage = (page: pageType) => {
         switch(page){
@@ -84,7 +84,8 @@ const useCurrency = () => {
         add,
         lvlUpMine,
         moveToPage,
-        page
+        page,
+        copperMine, ironMine, goldMine
     }
     )
 

@@ -11,7 +11,7 @@ const Asteroid = () => {
     const xd = useCurrency();
     return (
 
-        <div className='background'>
+        <div className='background1'>
             <div className='rocket'>
                 <img alt='rocket' src={rocketimg} onClick={(e: React.MouseEvent<HTMLElement>)=>{
                     xd.moveToPage("rocket")
