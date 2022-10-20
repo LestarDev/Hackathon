@@ -21,8 +21,24 @@ const Mine = () => {
     const ironRef = useRef<HTMLImageElement>(null);
     const goldRef = useRef<HTMLImageElement>(null);
 
+    const copperCostRef = useRef<HTMLDivElement>(null);
+    const ironCostRef = useRef<HTMLDivElement>(null);
+
+    const copperCostImgRef = useRef<HTMLImageElement>(null);
+    const ironCostImgRef = useRef<HTMLImageElement>(null);
+
     const odpRef1 = useRef<HTMLDivElement>(null);
     const odpRef2 = useRef<HTMLDivElement>(null);
+
+    const goldCostCopper = useRef<HTMLSpanElement>(null);
+    const goldCostIron = useRef<HTMLSpanElement>(null);
+    const goldCostGold = useRef<HTMLSpanElement>(null);
+
+    const upgradeRef1 = useRef<HTMLDivElement>(null);
+    const upgradeRef2 = useRef<HTMLDivElement>(null);
+    const upgradeRef3 = useRef<HTMLDivElement>(null);
+
+    const goldCostShutdownRef = useRef<HTMLDivElement>(null);
 
     useEffect(()=>{
         const interval = setInterval(() => {
@@ -97,39 +113,43 @@ const Mine = () => {
                             xd.add("copper", 1);
                     }
                 }}/>
-                <div className='upgrade1' onClick={(e: React.MouseEvent<HTMLElement>)=>{
+                <div className='upgrade1' ref={upgradeRef1} onClick={(e: React.MouseEvent<HTMLElement>)=>{
                         if(xd.copperMine>=3) return;
                         if(xd.copper<100) return;
                         if(xd.copperMine==0){
                             xd.lvlUpMine("copper");
                             xd.substract("copper", 100);
                             copperRef.current!.src=upgrade1;
+                            copperCostRef.current!.innerHTML='250';
+                            copperCostImgRef.current!.src= iron;
                         }
                         if(xd.iron<250) return;
                         if(xd.copperMine==1){
                             xd.lvlUpMine("copper");
                             xd.substract("iron", 250);
                             copperRef.current!.src=upgrade2;
+                            copperCostRef.current!.innerHTML='400';
+                            copperCostImgRef.current!.src=gold;
                         }
                         if(xd.gold<400) return;
                         if(xd.copperMine==2){
                             xd.lvlUpMine("copper");
                             xd.substract("gold", 400);
                             copperRef.current!.src=upgrade3;
+                            copperCostImgRef.current!.style.display="none";
+                            copperCostRef.current!.style.display="none";
+                            upgradeRef1.current!.style.display="none";
                         }
 
                     }}>
                     <p>UPGRADE</p>
                 </div>
                 <div className='cost1'>
-                    <div><span>0</span><img src={copper} alt='iCopper'/></div>
-                    <div><span>0</span><img src={iron} alt='iIron'/></div>
-                    <div><span>0</span><img src={gold} alt='iGold'/></div>
+                    <div><span ref={copperCostRef}>100</span><img ref={copperCostImgRef} src={copper} alt='iCopper'/></div>
                 </div>
         
 
                 <div className='odblokuj1' ref={odpRef1} onClick={(e: React.MouseEvent<HTMLElement>)=>{
-                    if(xd.ironMine>=1) return;
                     if(xd.copper<200) return;
                     xd.lvlUpMine("iron");
                     odpRef1.current!.style.display="none";
@@ -178,46 +198,58 @@ const Mine = () => {
 
                 </div>
 
-                <div className='upgrade2' onClick={(e: React.MouseEvent<HTMLElement>)=>{
+                <div className='upgrade2' ref={upgradeRef2} onClick={(e: React.MouseEvent<HTMLElement>)=>{
                         if(xd.ironMine>=3) return;
                         if(xd.copper<100) return;
-                        if(xd.copperMine==0){
+                        if(xd.ironMine==0){
                             xd.lvlUpMine("iron");
                             xd.substract("copper", 100);
                             ironRef.current!.src=upgrade1;
+                            ironCostRef.current!.innerHTML='375';
+                            ironCostImgRef.current!.src=iron;
                         }
                         if(xd.iron<375) return;
-                        if(xd.copperMine==1){
+                        if(xd.ironMine==1){
                             xd.lvlUpMine("iron");
                             xd.substract("iron", 375);
                             ironRef.current!.src=upgrade2;
+                            ironCostRef.current!.innerHTML='800';
+                            ironCostImgRef.current!.src=gold;
                         }
                         if(xd.gold<800) return;
-                        if(xd.copperMine==2){
+                        if(xd.ironMine==2){
                             xd.lvlUpMine("iron");
                             xd.substract("gold", 800);
                             ironRef.current!.src=upgrade3;
+                            upgradeRef2.current!.style.display="none";
+                            ironCostRef.current!.style.display="none";
+                            ironCostImgRef.current!.style.display="none";
                         }
                     }}>
                     <p>UPGRADE</p>
                 </div>
 
+                <div className='cost2'>
+                    <div><span ref={ironCostRef}>100</span><img ref={ironCostImgRef} src={copper} alt='iCopper'/></div>
+                </div>
 
                 <div className='odblokuj2' ref={odpRef2} onClick={(e: React.MouseEvent<HTMLElement>)=>{
                     if(xd.goldMine>=1) return;
                     if(xd.iron<200) return;
-                    xd.lvlUpMine("iron");
+                    xd.lvlUpMine("gold");
                     odpRef2.current!.style.display="none";
                 }}><p>odblokuj</p></div>
                 <div className='gate2'></div>
                 <div className='floor2'></div>
+
                 <img src={goldOre} className='goldOre' alt='goldOre'/>
                                 <div className='leftWall'>
                                     <img className='level1' ref={copperRef} src={upgrade0} alt='upgradeCopper'/>
                                     <img className='level2' ref={ironRef} src={upgrade0} alt='upgradeIron'/>
                                     <img className='level3' ref={goldRef} src={upgrade0} alt='upgradeGold'/>
                                 </div>
-                <div className='upgrade3' onClick={(e: React.MouseEvent<HTMLElement>)=>{
+
+                <div className='upgrade3' ref={upgradeRef3} onClick={(e: React.MouseEvent<HTMLElement>)=>{
                         if(xd.goldMine>=3) return;
                         if(xd.copper<100 || xd.iron<100 || xd.gold<100) return;
                         if(xd.goldMine==0){
@@ -226,6 +258,9 @@ const Mine = () => {
                             xd.substract("iron", 100);
                             xd.substract("gold", 100);
                             goldRef.current!.src=upgrade1;
+                            goldCostCopper.current!.innerHTML='400';
+                            goldCostIron.current!.innerHTML='400';
+                            goldCostGold.current!.innerHTML='400';
                         }
                         if(xd.copper<400 || xd.iron<400 || xd.gold<400) return;
                         if(xd.goldMine==1){
@@ -234,24 +269,26 @@ const Mine = () => {
                             xd.substract("iron", 400);
                             xd.substract("gold", 400);
                             goldRef.current!.src=upgrade2;
+                            goldCostCopper.current!.innerHTML='800';
+                            goldCostIron.current!.innerHTML='800';
+                            goldCostGold.current!.innerHTML='800';
                         }
-                        if(xd.copper<400 || xd.iron<400 || xd.gold<400) return;
-                        if(xd.copperMine==2){
-                            xd.lvlUpMine("gold");
+                        if(xd.copper<800 || xd.iron<800 || xd.gold<800) return;
+                        
+                        if(xd.goldMine==2){
                             xd.substract("copper", 800);
                             xd.substract("iron", 800);
                             xd.substract("gold", 800);
                             goldRef.current!.src=upgrade3;
+                            upgradeRef3.current!.style.display="none";
+                            goldCostShutdownRef.current!.style.display="none";
                         }
-                }} />
-                <div className='upgrade3'>
-              
-                    <p>UPGRADE</p>
-                </div>
-                <div className='cost3'>
-                    <div><span>0</span><img src={copper} alt='iCopper'/></div>
-                    <div><span>0</span><img src={iron} alt='iIron'/></div>
-                    <div><span>0</span><img src={gold} alt='iGold'/></div>
+                }}> <p>UPGRADE</p></div>
+
+                <div className='cost3' ref={goldCostShutdownRef}>
+                    <div><span ref={goldCostCopper}>100</span><img src={copper} alt='iCopper'/></div>
+                    <div><span ref={goldCostIron}>100</span><img src={iron} alt='iIron'/></div>
+                    <div><span ref={goldCostGold}>100</span><img src={gold} alt='iGold'/></div>
                 </div>
     <div className='floor'></div>
 
