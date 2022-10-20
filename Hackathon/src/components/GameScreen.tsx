@@ -1,19 +1,16 @@
 import { useEffect, useRef } from "react";
 import Player from "./client/Player";
 import Asteroid from "./pages/asteroid";
+import useCurrency from "../hook/useCurrency";
+import Greenhouse from "./pages/greenhouse";
+
 
 const GameScreen = () => {
-    const player = new Player();
-    const ScreenWidth = window.innerWidth;
-    const ScreenHeight = window.innerHeight;
-
-    const canvasRef = useRef<HTMLCanvasElement | null>(null);
-
-    let x = 10;
-
+    const xd = useCurrency()
+    
     return (
         <div>
-            <Asteroid />
+        <Asteroid />
         </div>
     )
 }
