@@ -4,6 +4,7 @@ import Greenhouse from "./pages/greenhouse";
 import Layout from "./pages/layout/layout";
 import Mine from "./pages/mine";
 import Rocket from "./pages/rocket";
+import TheEnd from "./pages/theend";
 
 function Page(){
     const xd = useCurrency();
@@ -18,6 +19,8 @@ function Page(){
         case 3:
             page = <Rocket/>
             break;
+        case 4:
+            page = <TheEnd/>
         default:
             page = <Asteroid/>
     }
