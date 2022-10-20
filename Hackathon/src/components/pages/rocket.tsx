@@ -10,7 +10,7 @@ const Rocket = () => {
     const xd = useCurrency();
 
     return (
-        <div className="rocket">
+        <div>
             <div className='exit' onClick={(e: React.MouseEvent<HTMLElement>)=>{
                 xd.moveToPage("home");
             }}>
@@ -18,9 +18,14 @@ const Rocket = () => {
             </div>
             <div className='wrapper'>
                 <img src={rocketImg} />
-                <div>{xd.copper}/5000 <img src={copperIcon} /> </div>
+                <div><div>{xd.copper}/5000 <img src={copperIcon} /> </div>
                 <div>{xd.iron}/5000 <img src={ironIcon} /> </div>
                 <div>{xd.gold}/5000 <img src={goldIcon} /> </div>
+                <div className='koniecGry' onClick={(e: React.MouseEvent<HTMLElement>)=>{
+                    if(xd.iron<5000 && xd.copper<5000 && xd.gold<5000) return;
+                    alert("Wygrana!");
+                }}>Wplac</div>
+                </div>
             </div>
            <div className='ground'>
                 <img alt='ground' src={groundImg}/>
