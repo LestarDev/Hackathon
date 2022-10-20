@@ -175,7 +175,8 @@ const Mine = () => {
                 }}/>
                 <div className='gate2'></div>
                 <div className='floor2'></div>
-                <img src={goldOre} className='goldOre' alt='goldOre' onClick={(e: React.MouseEvent<HTMLElement>)=>{
+                <img src={goldOre} className='goldOre' alt={xd.goldMine} onClick={(e: React.MouseEvent<HTMLElement>)=>{
+                    console.log(xd.goldMine);
                     switch(xd.goldMine){
                         case 1:
                             xd.add("gold", 1);
@@ -234,7 +235,6 @@ const Mine = () => {
                 </div>
 
                 <div className='odblokuj2' ref={odpRef2} onClick={(e: React.MouseEvent<HTMLElement>)=>{
-                    if(xd.goldMine>=1) return;
                     if(xd.iron<200) return;
                     xd.lvlUpMine("gold");
                     odpRef2.current!.style.display="none";
@@ -276,6 +276,7 @@ const Mine = () => {
                         if(xd.copper<800 || xd.iron<800 || xd.gold<800) return;
                         
                         if(xd.goldMine==2){
+                            xd.lvlUpMine("gold")
                             xd.substract("copper", 800);
                             xd.substract("iron", 800);
                             xd.substract("gold", 800);
