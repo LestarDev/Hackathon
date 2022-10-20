@@ -243,7 +243,7 @@ const Mine = () => {
                             xd.substract("gold", 800);
                             goldRef.current!.src=upgrade3;
                         }
-
+                }} />
                 <div className='upgrade3'>
               
                     <p>UPGRADE</p>
