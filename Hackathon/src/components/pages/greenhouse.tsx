@@ -1,4 +1,4 @@
-const greenhouse = () => {
+const Greenhouse = () => {
     return (
         <div className="greenhouse">
             <div className="tree">
@@ -12,4 +12,4 @@ const greenhouse = () => {
     )
 }
 
-export default greenhouse;
+export default Greenhouse;
