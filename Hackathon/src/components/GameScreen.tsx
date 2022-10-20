@@ -4,7 +4,7 @@ import Greenhouse from "./pages/greenhouse";
 
 
 const GameScreen = () => {
-    // const xd = useCurrency()
+    const xd = useCurrency()
     // const ScreenWidth = window.innerWidth;
     // const ScreenHeight = window.innerHeight;
 
@@ -32,6 +32,7 @@ const GameScreen = () => {
     return (
         <div>
           <Greenhouse />
+          {xd.gold}
         </div>
     )
 }
