@@ -8,7 +8,7 @@ import upgrade2 from "./../../assets/upgrade2.png"
 import upgrade3 from "./../../assets/upgrade3.png"
 import useCurrency from '../../hook/useCurrency'
 import { useEffect, useRef } from 'react'
-
+import './../../components/pages/layout/layout.css'
 const Mine = () => {
 
     const xd = useCurrency();
@@ -85,8 +85,15 @@ const Mine = () => {
                             xd.add("copper", 1);
                     }
                 }}/>
+                <div className='upgrade1'>
+                    <p>UPGRADE</p>
+                </div>
+        
+                <div className='odblokuj1'><p>odblokuj</p></div>
                 <div className='gate1'></div>
+
                 <div className='floor1'></div>
+
                 <img src={ironOre} className='ironOre' alt='ironOre' onClick={(e: React.MouseEvent<HTMLElement>)=>{
                     switch(xd.ironMine){
                         case 1:
@@ -190,8 +197,27 @@ const Mine = () => {
                             goldRef.current!.src=upgrade3;
                         }
                     }}/>
+
+
+
+                <div className='upgrade2'>
+                    <p>UPGRADE</p>
                 </div>
-                <div className='floor'></div>
+
+
+                <div className='odblokuj2'><p>odblokuj</p></div>
+                <div className='gate2'></div>
+                <div className='floor2'></div>
+                <img src={goldOre} className='goldOre' alt='goldOre'/>
+                                <div className='leftWall'>
+                                    <img className='level1' src={upgrade0} alt='upgradeCopper'/>
+                                    <img className='level2' src={upgrade0} alt='upgradeIron'/>
+                                    <img className='level3' src={upgrade0} alt='upgradeGold'/>
+                                </div>
+                <div className='upgrade3'>
+                    <p>UPGRADE</p>
+                </div>
+    <div className='floor'></div>
 
         </div>
     )
