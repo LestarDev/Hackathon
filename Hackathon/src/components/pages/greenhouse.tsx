@@ -1,21 +1,17 @@
-import useCurrency from "../../hook/useCurrency";
 
+import ground from './../../assets/greenhouseGround.png'
 const Greenhouse = () => {
-    const xd = useCurrency();
-    const click = () => {
-        xd.add("gold",10)
-        console.log(xd.gold);
-    }
     return (
-        <div className="greenhouse">
+        <div className="background">
             <div className="tree">
-                <button onClick={function(e: React.MouseEvent<HTMLElement>){
-                    click();
-                }}></button>
+                
             </div>
 
             <div className="bush">
-                <button></button>
+                
+            </div>
+            <div className="ground">
+                <img src={ground} alt="Greenground" />
             </div>
         </div>
     )
