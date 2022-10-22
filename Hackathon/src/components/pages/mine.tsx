@@ -86,7 +86,7 @@ const Mine = () => {
             clearInterval(interval)
         }
     },[])
-
+    
     return (
         <div className='background'>
             <div className='exit' onClick={(e: React.MouseEvent<HTMLElement>)=>{
